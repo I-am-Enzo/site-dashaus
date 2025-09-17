@@ -1,2 +1,2 @@
 # site-dashaus
-Institutional website of Das Haus Technology Solutions.
+Site institucional da Das Haus - Soluções em Tecnologia.
