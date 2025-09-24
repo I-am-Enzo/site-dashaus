@@ -1,5 +1,21 @@
 document.querySelector(".menu-toggle").addEventListener("click", function () {
-  document.querySelector(".menu").classList.toggle("ativo");
+  const menu = document.querySelector(".menu");
+  const body = document.querySelector("body");
+
+  menu.classList.toggle("ativo");
+  
+  if (menu.classList.contains("ativo")) {
+    body.classList.add("no-scroll");
+  } else {
+    body.classList.remove("no-scroll");
+  }
+});
+
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.menu').classList.remove('ativo');
+    document.querySelector('body').classList.remove('no-scroll');
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
