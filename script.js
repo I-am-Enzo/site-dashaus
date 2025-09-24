@@ -3,7 +3,7 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
   const body = document.querySelector("body");
 
   menu.classList.toggle("ativo");
-  
+
   if (menu.classList.contains("ativo")) {
     body.classList.add("no-scroll");
   } else {
@@ -46,13 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Função para calcular quantas logos por página e quantas páginas
     const updateCarouselSettings = () => {
       if (window.innerWidth >= 960) {
-        logosPerPage = 5;
+        logosPerPage = 4; 
       } else if (window.innerWidth >= 768) {
-        logosPerPage = 4;
-      } else if (window.innerWidth >= 480) {
-        logosPerPage = 3;
-      } else {
-        logosPerPage = 2;
+        logosPerPage = 3; 
+      } else { 
+        logosPerPage = 2; 
       }
       // Garante que o slideWidth seja atualizado com o tamanho correto do slide visível
       slideWidth = carouselTrack.children[0] ? carouselTrack.children[0].offsetWidth : 0;

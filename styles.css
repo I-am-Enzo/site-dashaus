@@ -377,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Portfólio */
 .client-carousel-wrapper {
-  max-width: 900px; /* Largura máxima do carrossel (ajuste conforme o layout) */
+  max-width: 1100px; /* Largura máxima do carrossel (ajuste conforme o layout) */
   margin: 3rem auto; /* Centraliza o carrossel e adiciona margem superior */
   position: relative; /* Para futuros posicionamentos se necessário */
   text-align: center; /* Centraliza os pontos de navegação */
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cor-branca);
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem 2rem; /* Espaçamento interno generoso */
+  padding: 2.5rem 3rem; /* Espaçamento interno generoso */
 }
 
 .client-carousel-track {
@@ -398,20 +398,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .client-logo-slide {
-  flex: 0 0 20%; /* Exibe 5 logos por vez (100% / 5 = 20%) */
+  flex: 0 0 25%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem; /* Espaçamento entre as logos */
+  padding: 0 1.5rem;
 }
 
 .client-logo-slide img {
   max-width: 100%;
-  max-height: 70px; /* Altura máxima para as logos */
+  max-height: 95px; /* Altura máxima para as logos */
   object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-  /* filter: grayscale(100%); <-- REMOVIDO para logos coloridas */
-  /* opacity: 0.8; <-- OPCIONAL se quiser um toque mais sutil */
-  /* transition: opacity 0.3s ease; <-- OPCIONAL */
 }
 
 /* --- Pontos de Navegação --- */
@@ -444,39 +441,30 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 960px) {
   .client-logo-slide {
-    flex-basis: 25%; /* Mostra 4 logos por vez */
+    flex-basis: 33.33%; /* Mostra 3 logos por vez */
   }
 }
 
 @media (max-width: 768px) {
   .client-carousel-track-container {
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   .client-logo-slide {
-    flex-basis: 33.33%; /* Mostra 3 logos por vez */
+    flex-basis: 50%; /* Mostra 2 logos por vez */
   }
   .client-logo-slide img {
-    max-height: 60px;
-  }
-  .carousel-dots {
-    gap: 0.5rem;
-  }
-  .dot {
-    width: 8px;
-    height: 8px;
+    max-height: 80px;
   }
 }
 
 @media (max-width: 480px) {
-  .client-carousel-track-container {
-    padding: 1rem 1rem;
-  }
   .client-logo-slide {
-    flex-basis: 50%; /* Mostra 2 logos por vez */
-    padding: 0 0.5rem;
+    /* Mantém 2 logos por vez, mas com mais espaço */
+    flex-basis: 50%; 
+    padding: 0 1rem;
   }
   .client-logo-slide img {
-    max-height: 50px;
+    max-height: 65px;
   }
 }
 
