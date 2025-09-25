@@ -5,27 +5,33 @@
   box-sizing: border-box;
 }
 
-/* Cores */
+/* Váriáveis */
 :root {
   --cor-primaria: #082859;
   --cor-secundaria: #ffc200;
   --cor-branca: #ffffff;
   --espacamento: 1rem; /* 16px base */
-  --font-principal: 'Montserrat', Arial, sans-serif;
-  --font-texto: 'Lato', Arial, sans-serif;
+  --font-principal: "Montserrat", Arial, sans-serif;
+  --font-texto: "Lato", Arial, sans-serif;
 }
 
+/* Bloqueia scroll da página */
 .no-scroll {
   overflow: hidden;
 }
 
 /* Fontes */
 body {
-  font-family: var(--font-texto) 
+  font-family: var(--font-texto);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-principal)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-principal);
 }
 
 /* Navbar */
@@ -41,14 +47,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar .container {
   display: flex;
-  justify-content: center; /* Centraliza os elementos */
+  justify-content: center; 
   align-items: center;
   padding: 0 1.5rem;
-  gap: 3rem; /* Maior espaçamento entre a logo e o menu */
+  gap: 3rem; 
 }
 
 .logo img {
-  height: 6rem; /* Ajustado para um tamanho maior */
+  height: 6rem; 
   margin-left: 0;
 }
 
@@ -59,19 +65,19 @@ h1, h2, h3, h4, h5, h6 {
 .menu ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem; /* Espaçamento entre os links */
+  gap: 1.5rem; 
   align-items: center;
 }
 .menu a {
   text-decoration: none;
   color: var(--cor-branca);
   padding: 0.75rem;
-  font-size: 1.125rem; /* Fonte maior */
-  font-weight: 600; /* Fonte mais grossa */
+  font-size: 1.125rem; 
+  font-weight: 600; 
   transition: color 0.3s ease-in-out;
 }
 
-.menu ul li :hover {
+.menu a:hover {
   color: var(--cor-secundaria);
 }
 
@@ -89,50 +95,50 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 48rem) {
   /* 768px */
   .menu {
-    position: fixed; 
+    position: fixed;
     top: 0;
-    left: -100%; 
+    left: -100%;
     width: 100%;
-    height: 100vh; 
-    
-    background-color: rgba(8, 40, 89, 0.95); 
-    backdrop-filter: blur(5px); 
-    
+    height: 100vh;
+
+    background-color: rgba(8, 40, 89, 0.95);
+    backdrop-filter: blur(5px);
+
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;   
-    
-    transition: left 0.4s ease-in-out; 
-    z-index: 999; 
+    justify-content: center;
+    align-items: center;
+
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
   }
 
   .menu.ativo {
-    left: 0; 
-    display: flex; 
+    left: 0;
+    display: flex;
   }
 
   .menu ul {
     flex-direction: column;
     padding: 0;
-    gap: 2rem; 
+    gap: 2rem;
   }
   .menu ul li {
     margin: 0;
   }
   .menu a {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 
   .menu-toggle {
     display: block;
-    z-index: 1000; 
+    z-index: 1000;
   }
 }
 
 /* Hero Section */
 .hero {
-  background: url(Imagens/Arte\ aleatória.png);
+  background: url(../img/randomArt.png);
   background-size: cover;
   color: var(--cor-branca);
   text-align: center;
@@ -140,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid rgba(255, 255, 255, 0.2); /* Linha sutil */
+  border-top: 2px solid rgba(255, 255, 255, 0.2); 
 }
 
 .hero .container {
@@ -174,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
-/* Responsivo */
+/* Responsividade */
 @media (max-width: 768px) {
   .hero {
     padding: 6rem 1rem;
@@ -210,31 +216,31 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   margin-bottom: 3rem;
   line-height: 1.7;
-  font-size: 1.175rem; 
-  font-weight: 500;    
+  font-size: 1.175rem;
+  font-weight: 500;
 }
 .sobre-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1.5rem;
-  max-width: 1100px;   /* Limita a largura da grade */
-  margin: 2rem auto 0; /* Centraliza e aplica a margem superior */
+  max-width: 1100px; 
+  margin: 2rem auto 0; 
 }
 .sobre-item {
   background: var(--cor-primaria);
-  padding: 2rem; /* Mais espaçamento interno */
+  padding: 2rem; 
   border-radius: 8px;
   color: var(--cor-branca);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo */
-  text-align: center; /* Centraliza o texto */
+  align-items: center; 
+  text-align: center; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .sobre-item:hover {
-  transform: translateY(-8px); /* Levanta o card um pouco */
-  box-shadow: 0 12px 25px rgba(8, 40, 89, 0.3); /* Sombra mais forte e azulada */
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 25px rgba(8, 40, 89, 0.3); 
 }
 .sobre-item h3 {
   color: var(--cor-secundaria);
@@ -242,21 +248,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 .sobre-item i {
-  font-size: 2.5rem; /* Tamanho do ícone */
-  color: var(--cor-secundaria); /* Cor amarela/dourada */
-  margin-bottom: 1rem; /* Espaço abaixo do ícone */
+  font-size: 2.5rem; 
+  color: var(--cor-secundaria); 
+  margin-bottom: 1rem; 
 }
-
 
 /* Serviços */
 #servicos {
   background-color: var(--cor-branca);
-  padding: 6rem 1.25rem; /* Ajuste o padding vertical se necessário */
+  padding: 6rem 1.25rem; 
 }
 
 #servicos h2 {
-  color: var(--cor-primaria); /* Azul escuro */
-  margin-bottom: 3rem; /* Mais espaço abaixo do título */
+  color: var(--cor-primaria); 
+  margin-bottom: 3rem; 
   font-size: 2.5rem;
 }
 
@@ -265,61 +270,60 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(
     auto-fit,
     minmax(280px, 1fr)
-  ); /* 3 colunas em desktop, responsivo */
-  gap: 2rem; /* Espaçamento entre os cards */
-  max-width: 1200px; /* Limite de largura para o grid */
-  margin: 0 auto; /* Centraliza o grid */
+  ); 
+  gap: 2rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .service-card {
-  background-color: var(--cor-primaria); /* Fundo azul escuro dos cards */
-  color: var(--cor-branca); /* Texto branco */
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca); 
   padding: 2rem;
-  border-radius: 12px; /* Cantos arredondados */
+  border-radius: 12px; 
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex; /* Para alinhar o conteúdo verticalmente */
+  display: flex; 
   flex-direction: column;
-  justify-content: flex-start; /* Alinha o conteúdo ao topo */
-  align-items: center; /* Centraliza o ícone e o texto */
+  justify-content: flex-start; 
+  align-items: center; 
 }
 
 .service-card:hover {
-  transform: translateY(-8px); /* Efeito de elevação no hover */
+  transform: translateY(-8px); 
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .service-icon {
-  width: 70px; /* Tamanho do círculo do ícone */
+  width: 70px; 
   height: 70px;
   background-color: var(
     --cor-primaria
-  ); /* Mesma cor do card, para não ter borda */
-  border-radius: 50%; /* Faz um círculo */
+  ); 
+  border-radius: 50%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem; /* Espaço abaixo do ícone */
-  /* Remove a borda se houver no design original */
+  margin-bottom: 1.5rem; 
 }
 
 .service-icon i {
-  font-size: 3.5rem; /* Tamanho do ícone */
-  color: var(--cor-secundaria); /* Cor dourada/amarela do ícone */
+  font-size: 3.5rem; 
+  color: var(--cor-secundaria); 
 }
 
 .service-card h3 {
-  font-size: 1.6rem; /* Tamanho do título */
-  font-weight: 700; /* Negrito */
-  margin-bottom: 0.8rem; /* Espaço abaixo do título */
-  color: var(--cor-branca); /* Garante que o título seja branco */
+  font-size: 1.6rem;
+  font-weight: 700; 
+  margin-bottom: 0.8rem;
+  color: var(--cor-branca); 
 }
 
 .service-card p {
-  font-size: 1rem; /* Tamanho da descrição */
-  line-height: 1.6; /* Espaçamento entre linhas */
-  color: #e0e0e0; /* Cor mais clara para o parágrafo */
+  font-size: 1rem; 
+  line-height: 1.6; 
+  color: #e0e0e0; 
 }
 
 /* === RESPONSIVIDADE PARA A SEÇÃO DE SERVIÇOS === */
@@ -328,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(
       auto-fit,
       minmax(250px, 1fr)
-    ); /* 2-3 colunas em telas médias */
+    ); 
   }
   .service-card h3 {
     font-size: 1.5rem;
@@ -340,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(
       auto-fit,
       minmax(280px, 1fr)
-    ); /* 1-2 colunas em tablets */
+    ); 
     gap: 1.5rem;
   }
   .service-card {
@@ -364,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .services-grid {
-    grid-template-columns: 1fr; /* Apenas 1 coluna em celulares */
+    grid-template-columns: 1fr; /
   }
   #servicos h2 {
     font-size: 2rem;
@@ -377,28 +381,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Portfólio */
 .client-carousel-wrapper {
-  max-width: 1100px; /* Largura máxima do carrossel (ajuste conforme o layout) */
-  margin: 3rem auto; /* Centraliza o carrossel e adiciona margem superior */
-  position: relative; /* Para futuros posicionamentos se necessário */
-  text-align: center; /* Centraliza os pontos de navegação */
+  max-width: 1100px; 
+  margin: 3rem auto; 
+  position: relative; 
+  text-align: center; 
 }
 
 .client-carousel-track-container {
-  overflow: hidden; /* Oculta as logos fora da visualização */
+  overflow: hidden; 
   background-color: var(--cor-branca);
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  padding: 2.5rem 3rem; /* Espaçamento interno generoso */
+  padding: 2.5rem 3rem; 
 }
 
 .client-carousel-track {
   display: flex;
-  transition: transform 0.8s ease-in-out; /* Transição mais suave para o movimento */
+  transition: transform 0.8s ease-in-out; 
   /* white-space: nowrap; Se precisar garantir que os itens não quebrem linha */
 }
 
 .client-logo-slide {
-  flex: 0 0 25%; 
+  flex: 0 0 25%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,41 +411,41 @@ h1, h2, h3, h4, h5, h6 {
 
 .client-logo-slide img {
   max-width: 100%;
-  max-height: 95px; /* Altura máxima para as logos */
-  object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+  max-height: 95px; 
+  object-fit: contain; 
 }
 
 /* --- Pontos de Navegação --- */
 .carousel-dots {
-  margin-top: 1.5rem; /* Espaço entre o carrossel e os pontos */
+  margin-top: 1.5rem; 
   display: flex;
-  justify-content: center; /* Centraliza os pontos */
-  gap: 0.75rem; /* Espaço entre os pontos */
+  justify-content: center; 
+  gap: 0.75rem; 
 }
 
 .dot {
   width: 10px;
   height: 10px;
-  background-color: #ccc; /* Cor dos pontos inativos */
+  background-color: #ccc; 
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dot.active {
-  background-color: var(--cor-primaria); /* Cor do ponto ativo */
-  transform: scale(1.2); /* Ponto ativo um pouco maior */
+  background-color: var(--cor-primaria); 
+  transform: scale(1.2); 
 }
 
 .dot:hover {
-  background-color: #aaa; /* Cor no hover */
+  background-color: #aaa; 
 }
 
 /* === RESPONSIVIDADE PARA O NOVO CARROSSEL === */
 
 @media (max-width: 960px) {
   .client-logo-slide {
-    flex-basis: 33.33%; /* Mostra 3 logos por vez */
+    flex-basis: 33.33%; 
   }
 }
 
@@ -450,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 1.5rem;
   }
   .client-logo-slide {
-    flex-basis: 50%; /* Mostra 2 logos por vez */
+    flex-basis: 50%; 
   }
   .client-logo-slide img {
     max-height: 80px;
@@ -459,8 +463,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .client-logo-slide {
-    /* Mantém 2 logos por vez, mas com mais espaço */
-    flex-basis: 50%; 
+    flex-basis: 50%;
     padding: 0 1rem;
   }
   .client-logo-slide img {
@@ -474,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contato {
-  padding: 3.75rem 1.25rem; /* 60px 20px */
+  padding: 3.75rem 1.25rem; 
   text-align: center;
 }
 
@@ -488,23 +491,23 @@ h1, h2, h3, h4, h5, h6 {
 #contato p {
   font-size: 1.175rem;
   color: #f0f0f0;
-  max-width: 37.5rem; /* 600px */
-  margin: 0 auto 1.25rem; /* 20px */
+  max-width: 37.5rem; 
+  margin: 0 auto 1.25rem; 
 }
 
 .botao-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #25d366; /* Cor do WhatsApp */
+  background-color: #25d366; 
   color: #fff;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem; 
   font-weight: 600;
-  padding: 0.9375rem 1.875rem; /* 15px 30px */
-  border-radius: 3.125rem; /* 50px */
+  padding: 0.9375rem 1.875rem; 
+  border-radius: 3.125rem; 
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 0px 4px 10px */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); 
 }
 
 .botao-whatsapp i {
@@ -527,13 +530,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .botao-whatsapp {
     font-size: 1rem;
-    padding: 0.75rem 1.5625rem; /* 12px 25px */
+    padding: 0.75rem 1.5625rem; 
   }
 }
 
 .contato-info-extra {
   color: #c0c0c0;
-  padding: 3rem 0; /* Espaçamento vertical generoso */
+  padding: 3rem 0; 
 }
 
 .info-bloco-wrapper {
@@ -554,8 +557,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-bloco i {
-  font-size: 1.5rem; /* Ícone um pouco maior */
-  color: var(--cor-secundaria); /* Cor dourada/amarela */
+  font-size: 1.5rem; 
+  color: var(--cor-secundaria); 
   margin-top: 0.25rem;
 }
 
@@ -607,12 +610,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
   font-size: 0.8rem;
   font-style: italic;
-  opacity: 0.7; /* Deixa mais discreto */
+  opacity: 0.7; 
   transition: opacity 0.3s ease;
 }
 
 .dev-by:hover {
-  opacity: 1; /* Ao passar o mouse, ele destaca */
+  opacity: 1; 
 }
 
 .logo img {
@@ -655,13 +658,13 @@ h1, h2, h3, h4, h5, h6 {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: var(--cor-secundaria); /* Cor amarela da DasHaus */
-  color: var(--cor-primaria); /* Azul da marca */
+  background-color: var(--cor-secundaria); 
+  color: var(--cor-primaria); 
   border: none;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  display: none; /* Ocultar inicialmente */
+  display: none; 
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -669,10 +672,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #backToTop i {
-  font-size: 20px; /* Ajuste conforme necessário */
+  font-size: 20px; 
   font-weight: bold;
 }
 
 #backToTop:hover {
-  background-color: #e6a800; /* Um tom mais escuro ao passar o mouse */
+  background-color: #e6a800; 
 }
